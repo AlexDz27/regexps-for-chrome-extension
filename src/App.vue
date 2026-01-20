@@ -1,18 +1,17 @@
 <script setup>
-import { ref, useTemplateRef } from 'vue'
+import { ref } from 'vue'
 
-const text = useTemplateRef('text')
+let regex = ref('')
 
-setTimeout(() => {
-  console.log(text.value.innerText)
-  console.log(text.value.innerText.match(/\+\d to (?!All).*/g))
-})
+function test() {
+  console.log(regex.value)
+}
 </script>
 
 <template>
   <main>
     <section>
-      <input id="input">
+      <input id="input" v-model="regex" @input="test">
     </section>
 
     <section ref="text">
