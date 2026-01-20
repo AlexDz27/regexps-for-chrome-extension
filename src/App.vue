@@ -4,8 +4,8 @@ import { ref, useTemplateRef } from 'vue'
 const text = useTemplateRef('text')
 
 setTimeout(() => {
-  console.log(text.value.textContent)
-  console.log(text.value.textContent.match(/\+\d to (?!All).*/g))
+  console.log(text.value.innerText)
+  console.log(text.value.innerText.match(/\+\d to (?!All).*/g))
 })
 </script>
 
