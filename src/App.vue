@@ -1,30 +1,26 @@
 <script setup>
 import { ref, useTemplateRef } from 'vue'
 
-const regexInputEl = useTemplateRef('input')
-let regexInput = ref('')
+let regexStr = ref('')
 const text = useTemplateRef('text')
 const results = ref([])
 
 function highlightMatches() {
-  const regex = new RegExp(regexInput.value, 'gi')
+  const regex = new RegExp(regexStr.value, 'gi')
 
-  console.log(text.value.innerText.match(regex))
   results.value = text.value.innerText.match(regex)
+  console.log(results.value)
 }
 
 function test() {
-  // console.log(regex.value)
   highlightMatches()
-
-  console.log(regexInputEl.value)
 }
 </script>
 
 <template>
   <main>
     <section>
-      <input ref="input" v-model="regexInput" @input="test">
+      <input ref="input" v-model="regexStr" @input="test">
     </section>
 
     <section ref="text">
