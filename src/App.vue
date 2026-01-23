@@ -11,16 +11,12 @@ function highlightMatches() {
   results.value = text.value.innerText.match(regex)
   console.log(results.value)
 }
-
-function test() {
-  highlightMatches()
-}
 </script>
 
 <template>
   <main>
     <section>
-      <input ref="input" v-model="regexStr" @input="test">
+      <input ref="input" v-model="regexStr" @input="highlightMatches">
     </section>
 
     <section ref="text">
