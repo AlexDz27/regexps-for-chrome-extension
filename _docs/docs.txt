@@ -1,2 +1,5 @@
-TODOS:
-- need try-catch for regex (but it is out of scope for mvp)
+Todos:
+  - need try-catch for regex (but it is out of scope for mvp)
+
+Wrapping-up
+  - safety for regexes? should also check chrome's guidelines
