@@ -125,15 +125,18 @@ function highlightMatches() {
   console.log(results.value[0])
 
   // console.log(walker.nextNode().textContent.test(regex))
-  console.log(regex.test(walker.nextNode().textContent))
+  // console.log(regex.test(walker.nextNode().textContent))
 
-  // for (let i = 0; i < results.value.length; i++) {
-  //   const curMatch = results.value[0]
+  // Beauty: #1
+  walker.nextNode()
+  for (let i = 0; i < 1; i++) {
+    const curMatch = results.value[0]
 
-  //   do {
-
-  //   } while (!walker.nextNode.test(regex))
-  // }
+    do {
+      // debugger
+      console.log(walker.currentNode)
+    } while (!walker.nextNode.test(regex))
+  }
 }
 </script>
 
