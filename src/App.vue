@@ -24,6 +24,7 @@ function highlightMatches() {
         return NodeFilter.FILTER_REJECT;
       }
       
+      // Refactor: why did i comment this?
       // // For non-HTML content (plain text files), prioritize pre elements
       // if (hasPreContent && !hasStandardContent) {
       //   if (parent.tagName === 'PRE') {
@@ -122,20 +123,22 @@ function highlightMatches() {
     }
   })
 
-  console.log(results.value[0])
+  // console.log(results.value[0])
 
   // console.log(walker.nextNode().textContent.test(regex))
   // console.log(regex.test(walker.nextNode().textContent))
 
-  // Beauty: #1
+  // Beauty: #1; Possible bug: #1
   walker.nextNode()
+  console.log(walker.currentNode)
   for (let i = 0; i < 1; i++) {
-    const curMatch = results.value[0]
-
-    do {
-      // debugger
-      console.log(walker.currentNode)
-    } while (!walker.nextNode.test(regex))
+    const curMatch = results.value[0]; console.log(curMatch);
+    let curMatchedTextNode
+    while (!regex.test(walker.nextNode().textContent)) {
+      console.log('while loop ran')
+      curMatchedTextNode = walker.currentNode
+      console.log('curMatchedTextNode', curMatchedTextNode)
+    }
   }
 }
 </script>

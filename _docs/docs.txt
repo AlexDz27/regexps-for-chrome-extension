@@ -1,8 +1,0 @@
-Todos:
-  - need try-catch for regex (but it is out of scope for mvp)
-
-Beauty:
-  - #1: it does skipping of <body> Node. I think i can do that when filtering  
-
-Wrapping-up
-  - safety for regexes? should also check chrome's guidelines

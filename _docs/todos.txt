@@ -1,0 +1,12 @@
+Todos:
+  - need try-catch for regex (but it is out of scope for mvp)
+
+Beauty:
+  - #1: it does skipping of <body> Node. I think i can do that when filtering 
+
+Possible bug:
+  - #1: nextNode() should be only inside loop. otherwise could be buggy
+
+Wrapping-up
+  - safety for regexes? should also check chrome's guidelines
+
